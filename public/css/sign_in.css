@@ -1,0 +1,134 @@
+.container-login {
+  width: 90%;
+  margin: 20px auto 40px auto;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.container-sub-1 {
+  margin-bottom: 15px;
+}
+
+.container-sub-1 > ul {
+  display: flex;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.container-sub-1 > ul > li {
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.fa-angle-right {
+  padding: 0 5px;
+  font-size: 13px;
+}
+
+.container-sub-1 > ul > li > a {
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.container-sub-2 {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.col {
+  padding: 20px;
+  border: 1px solid gainsboro;
+  width: calc(50% - 80px);
+}
+
+.btn-sign {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f8c052;
+  border: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.title-sub {
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: normal;
+  padding-bottom: 8px;
+}
+
+.content-sub {
+  padding-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+input {
+  height: 24px;
+}
+
+.form-control {
+  padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 0;
+  border: 1px solid gray;
+}
+
+.form-control:hover {
+  background-color: rgba(128, 128, 128, 0.233);
+}
+
+.form-control:focus {
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.233);
+}
+
+.form-label {
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.div-forget-password {
+  padding-bottom: 15px;
+}
+
+.forget-password {
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: normal;
+  color: rgba(218, 157, 26, 0.856);
+  padding-left: 2px;
+}

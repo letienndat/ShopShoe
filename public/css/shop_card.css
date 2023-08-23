@@ -1,0 +1,299 @@
+body {
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+.up-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: ease all 0.3s;
+}
+
+.fa-long-arrow-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  padding-top: 5px;
+  cursor: pointer;
+  transition: ease all 0.3s;
+  box-sizing: border-box;
+}
+
+.up-to-top:hover .fa-long-arrow-up {
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+.container-content {
+  width: 80%;
+  margin: 20px auto 40px auto;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.container-sub-1 {
+  margin-bottom: 20px;
+}
+
+.container-sub-1 > ul {
+  display: flex;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.container-sub-1 > ul > li {
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.fa-angle-right {
+  padding: 0 5px;
+  font-size: 13px;
+}
+
+.container-sub-1 > ul > li > a {
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.container-sub-2 {
+  max-width: 100%;
+}
+
+.title-page {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.no-products {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.no-products {
+  padding-bottom: 40px;
+}
+
+.notify-products {
+  font-size: 13px;
+}
+
+.table {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 100%;
+  margin: 30px 0;
+}
+
+.table > table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table > table > thead > * {
+  background-color: rgba(51, 51, 51, 0.1);
+  font-weight: bold;
+}
+
+.table > table > thead > tr > td,
+.table > table > thead > tr > th {
+  border-bottom-width: 2px;
+}
+
+.table > table > thead > tr > td,
+.table > table > thead > tr > th,
+.table > table > tbody > tr > td,
+.table > table > tbody > tr > th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  max-width: 100%;
+}
+
+.col-image {
+  width: 107px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.table > table > tbody > tr > td,
+.table > table > tbody > tr > th {
+  display: table-cell;
+}
+
+.table > table > tbody > tr .select-product {
+  width: 40px;
+  vertical-align: middle;
+}
+
+.table > table > tbody > tr .td-quantity {
+  width: 130px;
+}
+
+.table > table > tbody > tr > .td-title {
+  color: #e20c0c;
+}
+
+.table > table > tbody > tr > .td-title > a:hover {
+  color: #990808;
+}
+
+a,
+a:visited,
+a:active,
+a:link,
+a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: 75px;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.quantity {
+  vertical-align: middle;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  width: 104px;
+  height: 32px;
+  border-radius: 0px;
+  display: inline-block;
+}
+
+.input-group-addon {
+  background: #fff;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  line-height: 32px;
+  text-align: center;
+  width: 32px;
+  border-radius: 0;
+  cursor: pointer;
+  color: #b2b2b2;
+  transition: ease all 0.4s;
+  font-size: 25px;
+  top: 0;
+  user-select: none;
+}
+
+.product_quantity_down {
+  left: 0;
+}
+
+.product_quantity_up {
+  right: 0;
+}
+
+.form-control {
+  width: 40px;
+  background: #fff;
+  padding: 0 32px;
+  height: 32px;
+  line-height: 30px;
+  text-align: center;
+  color: #323232;
+  font-size: 14px;
+  border: none;
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.table-5 {
+  width: calc(100% / 12 * 5);
+}
+
+.table-7 {
+  width: calc(100% / 12 * 7);
+}
+
+.col-sm-4 {
+  width: calc(100% / 12 * 4);
+}
+
+.col-offset-8 {
+  padding-left: calc(100% / 12 * 8);
+}
+
+.buttons {
+  clear: both;
+}
+
+.buttons > .pull-left {
+  float: left;
+}
+
+.buttons > .pull-right {
+  float: right;
+}
+
+.buttons .btn {
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  cursor: pointer;
+  padding: 9px 20px;
+  color: #fff;
+  border-radius: 3px;
+  background: #e20c0c;
+  border: 0;
+}

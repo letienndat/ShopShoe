@@ -1,0 +1,85 @@
+footer {
+  width: 100%;
+  height: 260px;
+  background-color: rebeccapurple;
+  background-color: #fff;
+}
+
+.footer-top {
+  height: 20px;
+  background-color: #8080802a;
+  padding-top: 10px;
+}
+
+.footer-center {
+  height: 200px;
+  display: flex;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.footer-center-sub {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.footer-center-sub .footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-center-sub .footer-content strong {
+  padding-top: 10px;
+  font-weight: 600;
+  line-height: 21px;
+  box-sizing: border-box;
+}
+
+.ul-member {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3px;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.li-name-member {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.module {
+  padding: 10px;
+  height: 50%;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.contact-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  padding-bottom: 5px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.fa-brands {
+  font-size: 25px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.footer-botton {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
