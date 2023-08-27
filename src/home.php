@@ -16,8 +16,8 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 ?>
 
 <?php
@@ -48,11 +48,11 @@ function getTitlePage($type_converse, $search)
     <div class="container-content">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
                 <?php
                 if (isset($type_converse)) {
                 ?>
-                    <li><a href=<?php echo "/assignment/src/home.php?type=" . $type_converse ?>>
+                    <li><a href=<?php echo "/ShopShoe/src/home.php?type=" . $type_converse ?>>
                             <?php
                             echo getTitlePage($type_converse, $search);
                             ?>
@@ -61,11 +61,11 @@ function getTitlePage($type_converse, $search)
                 <?php
                 } else if (isset($search)) {
                 ?>
-                    <li><a href=<?php echo "/assignment/src/home.php?search=" . $search ?>>Search</a></li>
+                    <li><a href=<?php echo "/ShopShoe/src/home.php?search=" . $search ?>>Search</a></li>
                 <?php
                 } else {
                 ?>
-                    <li><a href="/assignment/src/home.php">All Converse</a></li>
+                    <li><a href="/ShopShoe/src/home.php">All Converse</a></li>
                 <?php
                 }
                 ?>
@@ -76,7 +76,7 @@ function getTitlePage($type_converse, $search)
             if (!isset($search)) {
             ?>
                 <div class="div-banner">
-                    <img class="banner" src=<?php echo "/assignment/public/images/" . (isset($type_converse) ? $type_converse . ".jpg" : "converse.jpg") ?> alt="All Converse">
+                    <img class="banner" src=<?php echo "/ShopShoe/public/images/" . (isset($type_converse) ? $type_converse . ".jpg" : "converse.jpg") ?> alt="All Converse">
                 </div>
             <?php
             } else {
@@ -142,11 +142,11 @@ function getTitlePage($type_converse, $search)
                                     <a href="
                                         <?php
                                         if (isset($search)) {
-                                            echo "/assignment/src/detail.php?product_id=" . $shoe['id'];
+                                            echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'];
                                         } else if (isset($type_converse)) {
-                                            echo "/assignment/src/detail.php?product_id=" . $shoe['id'] . '&type=' . $type_converse;
+                                            echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'] . '&type=' . $type_converse;
                                         } else {
-                                            echo "/assignment/src/detail.php?product_id=" . $shoe['id'] . '&type=converse';
+                                            echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'] . '&type=converse';
                                         }
                                         ?>
                                     ">
@@ -158,11 +158,11 @@ function getTitlePage($type_converse, $search)
                                         <a href="
                                         <?php
                                         if (isset($search)) {
-                                            echo "/assignment/src/detail.php?product_id=" . $shoe['id'];
+                                            echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'];
                                         } else if (isset($type_converse)) {
-                                            echo "/assignment/src/detail.php?product_id=" . $shoe['id'] . '&type=' . $type_converse;
+                                            echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'] . '&type=' . $type_converse;
                                         } else {
-                                            echo "/assignment/src/detail.php?product_id=" . $shoe['id'] . '&type=converse';
+                                            echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'] . '&type=converse';
                                         }
                                         ?>
                                     ">

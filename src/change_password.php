@@ -9,10 +9,10 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 if ($username_local === null) {
-    header("Location: " . "/assignment/src/home.php");
+    header("Location: " . "/ShopShoe/src/home.php");
     exit;
 }
 ?>
@@ -42,10 +42,10 @@ if (isset($old_password) && isset($new_password)) {
 
         if ($stmt->rowCount() > 0) {
             echo '<script>alert("Thay đổi mật khẩu thành công!")</script>';
-            echo '<script>window.location.href="/assignment/src/home.php"</script>';
+            echo '<script>window.location.href="/ShopShoe/src/home.php"</script>';
         } else {
             echo '<script>alert("Thay đổi mật khẩu thất bại, hãy thử lại!")</script>';
-            echo '<script>window.location.href="/assignment/src/change_password.php"</script>';
+            echo '<script>window.location.href="/ShopShoe/src/change_password.php"</script>';
         }
     } catch (PDOException $e) {
         echo '<script>console.log("Lỗi: ' . $e->getMessage() . '")</script>';
@@ -61,9 +61,9 @@ if (isset($old_password) && isset($new_password)) {
     <div class="container-signup">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/profile.php">Tài khoản<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/change_password.php">Đổi mật khẩu</a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/profile.php">Tài khoản<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/change_password.php">Đổi mật khẩu</a></li>
             </ul>
         </div>
 
@@ -71,7 +71,7 @@ if (isset($old_password) && isset($new_password)) {
             <div class="content">
                 <h1 class="title-signup">Đổi Mật Khẩu</h1>
                 <p><strong>Lưu ý:</strong> Các mục dấu <strong>màu đỏ</strong> không được bỏ trống & phải điền đầy đủ, chính xác</p>
-                <form id="change-password" action="/assignment/src/change_password.php" method="POST">
+                <form id="change-password" action="/ShopShoe/src/change_password.php" method="POST">
                     <fieldset class="username">
                         <legend>Tên tài khoản</legend>
                         <div class="form-group">

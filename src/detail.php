@@ -9,7 +9,7 @@
     $product_id = $_GET['product_id'];
 
     if (!isset($product_id)) {
-        echo '<script>window.location.href="/assignment/src/home.php"</script>';
+        echo '<script>window.location.href="/ShopShoe/src/home.php"</script>';
     }
     ?>
 
@@ -18,8 +18,8 @@
         $type_converse = $_GET['type'];
 
         $root = $_SERVER['DOCUMENT_ROOT'];
-        require_once $root . '/assignment/database/info_connect_db.php';
-        require_once $root . '/assignment/local/data.php';
+        require_once $root . '/ShopShoe/database/info_connect_db.php';
+        require_once $root . '/ShopShoe/local/data.php';
 
         try {
             // Kết nối đến cơ sở dữ liệu MySQL
@@ -42,7 +42,7 @@
 
     <?php
     if (sizeof($shoe) === 0) {
-        echo '<script>window.location.href="/assignment/src/home.php"</script>';
+        echo '<script>window.location.href="/ShopShoe/src/home.php"</script>';
     } else {
         $shoe = $shoe[0];
     }
@@ -57,7 +57,7 @@
     <div class="container-content">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
 
                 <?php
                 if (isset($type_converse)) {
@@ -81,7 +81,7 @@
                     }
 
                 ?>
-                    <li><a href="<?php echo "/assignment/src/home.php" . ($type_converse === 'converse' ? "" : "?type=" . $type_converse) ?>"><?php echo $title ?><i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="<?php echo "/ShopShoe/src/home.php" . ($type_converse === 'converse' ? "" : "?type=" . $type_converse) ?>"><?php echo $title ?><i class="fa fa-angle-right"></i></a></li>
                 <?php
                 }
                 ?>
@@ -198,7 +198,7 @@
                 }),
             }
 
-            fetch('/assignment/service/add_favorite.php', option)
+            fetch('/ShopShoe/service/add_favorite.php', option)
                 .then(response => response.json()) // Chuyển dữ liệu phản hồi thành JSON
                 .then(data => {
                     // Xử lý dữ liệu phản hồi từ PHP
@@ -228,12 +228,12 @@
                     }),
                 }
 
-                fetch('/assignment/service/add_shop_card.php', option)
+                fetch('/ShopShoe/service/add_shop_card.php', option)
                     .then(response => response.json()) // Chuyển dữ liệu phản hồi thành JSON
                     .then(data => {
                         // Xử lý dữ liệu phản hồi từ PHP
                         alert(data.message); // Hiển thị phản hồi trong alert
-                        window.location.href = '/assignment/src/shop_card.php'
+                        window.location.href = '/ShopShoe/src/shop_card.php'
                     })
                     .catch(err => console.error(err))
             } else {
@@ -268,11 +268,11 @@
     }
 
     const edit_product = (id) => {
-        window.location.href = `/assignment/src/edit_product.php?product_id=${id}`
+        window.location.href = `/ShopShoe/src/edit_product.php?product_id=${id}`
     }
 
     const delete_product = (id) => {
-        window.location.href = `/assignment/service/delete_product.php?product_id=${id}`
+        window.location.href = `/ShopShoe/service/delete_product.php?product_id=${id}`
     }
 </script>
 

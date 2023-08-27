@@ -9,8 +9,8 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 include '../service/redirect.php';
 ?>
 
@@ -31,12 +31,12 @@ if (isset($username_)) {
         if ($stmt->rowCount() > 0) {
             echo '<script>
                 alert("Mật khẩu của bạn là: ' . $stmt->fetch(PDO::FETCH_ASSOC)['password'] . '");' .
-                'window.location.href="/assignment/src/sign_in.php";
+                'window.location.href="/ShopShoe/src/sign_in.php";
             </script>';
         } else {
             echo '<script>
                 alert("Xin lỗi, tên tài khoản không tồn tại!");
-                window.location.href="/assignment/src/forget_password.php";
+                window.location.href="/ShopShoe/src/forget_password.php";
             </script>';
         }
     } catch (PDOException $e) {
@@ -53,9 +53,9 @@ if (isset($username_)) {
     <div class="container-signup">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/sign_in.php">Tài khoản<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/forget_password.php">Quên mật khẩu</a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/sign_in.php">Tài khoản<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/forget_password.php">Quên mật khẩu</a></li>
             </ul>
         </div>
 

@@ -9,11 +9,11 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 
 if ($username_local === null || $role !== 1) {
-    header("Location: " . "/assignment/src/home.php");
+    header("Location: " . "/ShopShoe/src/home.php");
     exit;
 }
 
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Di chuyển hình ảnh vào thư mục lưu trữ
         if (move_uploaded_file($tempImageFile, '.' . $uploadDir . $imageFileName)) {
             // Hình ảnh đã được lưu thành công, tiếp tục lưu thông tin sản phẩm vào cơ sở dữ liệu
-            $imageFileName = '/assignment' . $uploadDir . $imageFileName;
+            $imageFileName = '/ShopShoe' . $uploadDir . $imageFileName;
             $title = $_POST['title'];
             $price = $_POST['price'];
             $type = $_POST['type'];
@@ -65,13 +65,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             } catch (PDOException $e) {
                 echo '<script>console.log("Lỗi: ' . $e->getMessage() . '")</script>';
             } finally {
-                echo '<script>window.location.href = "/assignment/src/add_product.php"</script>';
+                echo '<script>window.location.href = "/ShopShoe/src/add_product.php"</script>';
             }
 
             $conn = null;
         } else {
             echo '<script>alert("Có lỗi khi lưu hình ảnh!")</script>';
-            echo '<script>window.location.href = "/assignment/src/add_product.php"</script>';
+            echo '<script>window.location.href = "/ShopShoe/src/add_product.php"</script>';
         }
     }
 }
@@ -85,9 +85,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="container-signup">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/profile.php">Quản trị viên<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/add_product.php">Thêm sản phẩm</a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/profile.php">Quản trị viên<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/add_product.php">Thêm sản phẩm</a></li>
             </ul>
         </div>
 
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="content">
                 <h1 class="title-add-product">Thêm sản phẩm</h1>
                 <p><strong>Lưu ý:</strong> Các mục dấu <strong>màu đỏ</strong> không được bỏ trống & phải điền đầy đủ, chính xác</p>
-                <form id="add-product" action="/assignment/src/add_product.php" method="POST" enctype="multipart/form-data">
+                <form id="add-product" action="/ShopShoe/src/add_product.php" method="POST" enctype="multipart/form-data">
                     <fieldset class="info-product">
                         <legend>Thông tin sản phẩm</legend>
                         <div class="form-group-image">

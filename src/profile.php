@@ -9,10 +9,10 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 if ($username_local === null) {
-    header("Location: " . "/assignment/src/home.php");
+    header("Location: " . "/ShopShoe/src/home.php");
     exit;
 }
 ?>
@@ -73,17 +73,17 @@ if (isset($first_name) && isset($last_name)) {
     <div class="container-signup">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/profile.php">Tài khoản</a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/profile.php">Tài khoản</a></li>
             </ul>
         </div>
 
         <div class="container-sub-2">
             <div class="content">
                 <h1 class="title-signup">Thông Tin Tài Khoản</h1>
-                <p>Bạn muốn đổi mật khẩu? Đổi mật khẩu <a href="/assignment/src/change_password.php" class="link-login">Tại đây</a></p>
+                <p>Bạn muốn đổi mật khẩu? Đổi mật khẩu <a href="/ShopShoe/src/change_password.php" class="link-login">Tại đây</a></p>
                 <p><strong>Lưu ý:</strong> Các mục dấu <strong>màu đỏ</strong> không được bỏ trống & phải điền đầy đủ, chính xác</p>
-                <form id="profile" action="/assignment/src/profile.php" method="POST">
+                <form id="profile" action="/ShopShoe/src/profile.php" method="POST">
                     <fieldset class="username">
                         <legend>Tên tài khoản</legend>
                         <div class="form-group">

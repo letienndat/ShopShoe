@@ -9,12 +9,12 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 if ($username_local === null) {
     echo '<script>
     alert("Xin lỗi, bạn chưa đăng nhập!")
-    window.location.href="/assignment/src/sign_in.php"
+    window.location.href="/ShopShoe/src/sign_in.php"
     </script>';
 }
 $sort = $_GET['sort'];
@@ -28,8 +28,8 @@ $sort = $_GET['sort'];
     <div class="container-content">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/list_favorite.php">Danh sách yêu thích</a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/list_favorite.php">Danh sách yêu thích</a></li>
             </ul>
         </div>
         <div class="container-sub-2">
@@ -87,7 +87,7 @@ $sort = $_GET['sort'];
                                 <div class="top-block">
                                     <a href="
                                         <?php
-                                        echo "/assignment/src/detail.php?product_id=" . $shoe['id'];
+                                        echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'];
                                         ?>
                                     ">
                                         <img class="image-product" src=<?php echo $shoe['path_image'] ?> alt="<?php echo $shoe['title'] ?>">
@@ -97,7 +97,7 @@ $sort = $_GET['sort'];
                                     <h4>
                                         <a href="
                                         <?php
-                                        echo "/assignment/src/detail.php?product_id=" . $shoe['id'];
+                                        echo "/ShopShoe/src/detail.php?product_id=" . $shoe['id'];
                                         ?>
                                     ">
                                             <?php echo mb_strtoupper($shoe['title'], 'UTF-8') ?></a>

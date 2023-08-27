@@ -6,18 +6,18 @@
             </div>
 
             <?php
-            require_once $root . '/assignment/local/data.php';
+            require_once $root . '/ShopShoe/local/data.php';
 
             if ($username_local === null) {
             ?>
                 <div class="sign-up">
-                    <a class="sign a-sign-up" href="/assignment/src/sign_up.php">
+                    <a class="sign a-sign-up" href="/ShopShoe/src/sign_up.php">
                         <i class="fa fa-lock"></i>
                         Đăng Ký
                     </a>
                 </div>
                 <div class="sign-in">
-                    <a class="sign a-sign-in" href="/assignment/src/sign_in.php">
+                    <a class="sign a-sign-in" href="/ShopShoe/src/sign_in.php">
                         <i class="fa fa-user"></i>
                         Đăng Nhập
                     </a>
@@ -29,7 +29,7 @@
                 if ($role === 1) {
                 ?>
                     <div class="add">
-                        <a class="sign a-add" href="/assignment/src/add_product.php">
+                        <a class="sign a-add" href="/ShopShoe/src/add_product.php">
                             <i class="fa fa-plus-circle"></i>
                             Thêm sản phẩm
                         </a>
@@ -38,13 +38,13 @@
                 }
                 ?>
                 <div title="Thông tin cá nhân" class="user">
-                    <a class="sign a-user" href="/assignment/src/profile.php">
+                    <a class="sign a-user" href="/ShopShoe/src/profile.php">
                         <i class="fa fa-user"></i>
                         <?php echo $username_local . ($role === 1 ? " (Admin)" : ""); ?>
                     </a>
                 </div>
                 <div class="sign-out">
-                    <a class="sign a-sign-out" href="/assignment/src/sign_out.php">
+                    <a class="sign a-sign-out" href="/ShopShoe/src/sign_out.php">
                         <i class="fa fa-sign-out"></i>
                         Đăng Xuất
                     </a>
@@ -61,16 +61,16 @@
                 <div class="col-sm-3">
                 </div>
                 <div class="col-sm-6">
-                    <a href="/assignment/src/home.php">
-                        <img class="logo" src="/assignment/public/images/drake_logo.png" alt="">
+                    <a href="/ShopShoe/src/home.php">
+                        <img class="logo" src="/ShopShoe/public/images/drake_logo.png" alt="">
                     </a>
                 </div>
                 <div class="col-sm-3 text-right">
-                    <a class="a-heart" href="/assignment/src/list_favorite.php">
+                    <a class="a-heart" href="/ShopShoe/src/list_favorite.php">
                         <i title="Danh sách yêu thích" class="fa-regular fa-heart heart"></i>
                     </a>
                     <div class="shopcart">
-                        <a href="/assignment/src/shop_card.php">
+                        <a href="/ShopShoe/src/shop_card.php">
                             <i title="Giỏ hàng" class="fa fa-shopping-cart"></i>
                         </a>
                         <?php
@@ -103,16 +103,16 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="navbar">
-                        <li class="with-sub-menu"><a class="effect-navbar" href="/assignment/src/home.php"><strong class="strong-menu">CONVERSE</strong></a></li>
-                        <li class="with-sub-menu"><a class="effect-navbar" href="/assignment/src/home.php?type=classic"><strong class="strong-menu">CLASSIC</strong></a></li>
-                        <li class="with-sub-menu"><a class="effect-navbar" href="/assignment/src/home.php?type=chuck_1970s"><strong class="strong-menu">CHUCK 1970S</strong></a></li>
-                        <li class="with-sub-menu"><a class="effect-navbar" href="/assignment/src/home.php?type=chuck_2"><strong class="strong-menu">CHUCK II</strong></a></li>
-                        <li class="with-sub-menu"><a class="effect-navbar" href="/assignment/src/home.php?type=seasonal"><strong class="strong-menu">SEASONAL</strong></a></li>
-                        <li class="with-sub-menu"><a class="effect-navbar" href="/assignment/src/home.php?type=sneaker"><strong class="strong-menu">SNEAKER</strong></a></li>
+                        <li class="with-sub-menu"><a class="effect-navbar" href="/ShopShoe/src/home.php"><strong class="strong-menu">CONVERSE</strong></a></li>
+                        <li class="with-sub-menu"><a class="effect-navbar" href="/ShopShoe/src/home.php?type=classic"><strong class="strong-menu">CLASSIC</strong></a></li>
+                        <li class="with-sub-menu"><a class="effect-navbar" href="/ShopShoe/src/home.php?type=chuck_1970s"><strong class="strong-menu">CHUCK 1970S</strong></a></li>
+                        <li class="with-sub-menu"><a class="effect-navbar" href="/ShopShoe/src/home.php?type=chuck_2"><strong class="strong-menu">CHUCK II</strong></a></li>
+                        <li class="with-sub-menu"><a class="effect-navbar" href="/ShopShoe/src/home.php?type=seasonal"><strong class="strong-menu">SEASONAL</strong></a></li>
+                        <li class="with-sub-menu"><a class="effect-navbar" href="/ShopShoe/src/home.php?type=sneaker"><strong class="strong-menu">SNEAKER</strong></a></li>
                     </ul>
                     <div class="sb-search">
                         <div class="search-content">
-                            <form action="/assignment/src/home.php" method="get">
+                            <form action="/ShopShoe/src/home.php" method="get">
                                 <?php
                                 $search = $_GET['search'];
                                 ?>

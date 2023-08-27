@@ -1,7 +1,7 @@
 ﻿<?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/obj/shoe.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/obj/shoe.php';
 
 try {
     // Kết nối đến cơ sở dữ liệu MySQL
@@ -26,7 +26,7 @@ try {
             $type = 'sneaker';
         }
         copy($path_temp, $path_image);
-        $path_image = '/assignment/public/images/' . $id . '.jpg';
+        $path_image = '/ShopShoe/public/images/' . $id . '.jpg';
         array_push($shoes, new Shoe($id, $path_image, "Converse Chuck Taylor All Star Festival Smoothie", random_int(800, 2000) * 1000, $type, "Converse", "Việt Nam", "Textile", "Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân"));
     }
 

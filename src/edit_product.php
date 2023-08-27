@@ -9,11 +9,11 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 
 if ($username_local === null || $role !== 1) {
-    header("Location: " . "/assignment/src/home.php");
+    header("Location: " . "/ShopShoe/src/home.php");
     exit;
 }
 
@@ -72,10 +72,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->execute();
 
         echo '<script>alert("Cập nhật thông tin thành công!")</script>';
-        echo '<script>window.location.href = "/assignment/src/detail.php?product_id=' . $id . '"</script>';
+        echo '<script>window.location.href = "/ShopShoe/src/detail.php?product_id=' . $id . '"</script>';
     } catch (PDOException $e) {
         echo '<script>console.log("Lỗi: ' . $e->getMessage() . '")</script>';
-        echo '<script>window.location.href = "/assignment/src/edit_product.php?product_id=' . $id . '"</script>';
+        echo '<script>window.location.href = "/ShopShoe/src/edit_product.php?product_id=' . $id . '"</script>';
     }
 
     $conn = null;
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $product_id = $_GET['product_id'];
 
     if (!isset($product_id)) {
-        header("Location: " . "/assignment/src/home.php");
+        header("Location: " . "/ShopShoe/src/home.php");
         exit;
     } else {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $description = $result['description'];
         } else {
             // ID không tồn tại trong bảng shoes
-            header("Location: " . "/assignment/src/home.php");
+            header("Location: " . "/ShopShoe/src/home.php");
             exit;
         }
     }
@@ -122,9 +122,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="container-signup">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/profile.php">Quản trị viên<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="<?php echo '/assignment/src/edit_product.php?product_id=' . $product_id ?>">Chỉnh sửa sản phẩm</a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/profile.php">Quản trị viên<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="<?php echo '/ShopShoe/src/edit_product.php?product_id=' . $product_id ?>">Chỉnh sửa sản phẩm</a></li>
             </ul>
         </div>
 
@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="content">
                 <h1 class="title-add-product">Chỉnh sửa sản phẩm</h1>
                 <p><strong>Lưu ý:</strong> Các mục dấu <strong>màu đỏ</strong> không được bỏ trống & phải điền đầy đủ, chính xác</p>
-                <form id="add-product" action="<?php echo '/assignment/src/edit_product.php?product_id=' . $product_id ?>" method="POST" enctype="multipart/form-data">
+                <form id="add-product" action="<?php echo '/ShopShoe/src/edit_product.php?product_id=' . $product_id ?>" method="POST" enctype="multipart/form-data">
                     <fieldset class="info-product">
                         <legend>Thông tin sản phẩm</legend>
                         <div class="form-group">

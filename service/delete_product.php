@@ -1,11 +1,11 @@
 <?php
 session_start();
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 
 if ($username_local === null || $role !== 1) {
-    header("Location: " . "/assignment/src/home.php");
+    header("Location: " . "/ShopShoe/src/home.php");
     exit;
 }
 
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $stmt->execute();
 
         $path_image = ($stmt->fetch())['path_image'];
-        $path_image = str_replace("/assignment", "..", $path_image);
+        $path_image = str_replace("/ShopShoe", "..", $path_image);
 
         // Xóa sản phẩm dựa trên id
         $stmt = $conn->prepare("DELETE FROM shoes WHERE id = :id");
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             // Không tìm thấy sản phẩm với id tương ứng hoặc đã có lỗi xảy ra trong quá trình xóa
             echo '<script>alert("Thất bại! ID không trùng với bất kỳ sản phẩm nào")</script>';
         }
-        echo '<script>window.location.href = "/assignment/src/home.php"</script>';
+        echo '<script>window.location.href = "/ShopShoe/src/home.php"</script>';
     } catch (PDOException $e) {
         echo '<script>console.log("Lỗi: ' . $e->getMessage() . '")</script>';
     }

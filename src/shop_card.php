@@ -9,12 +9,12 @@
 
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
-require_once $root . '/assignment/local/data.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
+require_once $root . '/ShopShoe/local/data.php';
 if ($username_local === null) {
     echo '<script>
     alert("Xin lỗi, bạn chưa đăng nhập!")
-    window.location.href="/assignment/src/sign_in.php"
+    window.location.href="/ShopShoe/src/sign_in.php"
     </script>';
 }
 ?>
@@ -27,8 +27,8 @@ if ($username_local === null) {
     <div class="container-content">
         <div class="container-sub-1">
             <ul class="breadcrumb">
-                <li><a href="/assignment/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
-                <li><a href="/assignment/src/shop_card.php">Giỏ hàng</a></li>
+                <li><a href="/ShopShoe/src/home.php">Trang chủ<i class="fa fa-angle-right"></i></a></li>
+                <li><a href="/ShopShoe/src/shop_card.php">Giỏ hàng</a></li>
             </ul>
         </div>
         <div class="container-sub-2">
@@ -86,14 +86,14 @@ if ($username_local === null) {
                                     </td>
                                     <td class="text-center col-image">
                                         <?php
-                                        echo '<a href="/assignment/src/detail.php?product_id=' . $row['id'] . '">' .
+                                        echo '<a href="/ShopShoe/src/detail.php?product_id=' . $row['id'] . '">' .
                                             '<img class="img-thumbnail" src="' . $row['path_image'] . '" alt="' . $row['title'] . '">' .
                                             '</a>';
                                         ?>
                                     </td>
                                     <td class="td-title">
                                         <?php
-                                        echo '<a href="/assignment/src/detail.php?product_id=' . $row['id'] . '">' . $row['title'] . '</a>';
+                                        echo '<a href="/ShopShoe/src/detail.php?product_id=' . $row['id'] . '">' . $row['title'] . '</a>';
                                         ?>
                                     </td>
                                     <td class="text-center td-quantity">
@@ -138,7 +138,7 @@ if ($username_local === null) {
                     </div>
                     <div class="buttons">
                         <div class="pull-left">
-                            <a href="/assignment/src/home.php" class="btn">Tiếp tục mua hàng</a>
+                            <a href="/ShopShoe/src/home.php" class="btn">Tiếp tục mua hàng</a>
                         </div>
                         <div class="pull-right">
                             <?php echo '<button type="submit" class="btn">Thanh toán</button>' ?>
@@ -221,7 +221,7 @@ if ($username_local === null) {
             shoe_id: id,
             operator
         })
-        fetch('/assignment/service/update_quantity_shop_card.php', option)
+        fetch('/ShopShoe/service/update_quantity_shop_card.php', option)
             .then(response => response.json())
             .then(data => {
                 var check = document.querySelector(`#input-checkbox-${id}`).checked
@@ -237,7 +237,7 @@ if ($username_local === null) {
                     }
                 } else {
                     if (document.querySelectorAll('.row-number').length === 1) {
-                        window.location.href = '/assignment/src/shop_card.php'
+                        window.location.href = '/ShopShoe/src/shop_card.php'
                     } else {
                         if (check) {
                             sum_all -= price
@@ -260,7 +260,7 @@ if ($username_local === null) {
         const formData = new FormData(event.target);
         formData.append('username', event.target.dataset.username)
 
-        fetch("/assignment/service/checkout.php", {
+        fetch("/ShopShoe/service/checkout.php", {
                 method: "POST",
                 body: formData
             })
@@ -268,7 +268,7 @@ if ($username_local === null) {
             .then(data => {
                 alert(data.message)
                 if (data.status === 2) {
-                    window.location.href = '/assignment/src/shop_card.php'
+                    window.location.href = '/ShopShoe/src/shop_card.php'
                 }
             })
             .catch(error => console.error(error));

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $username_ = isset($_POST['username']) ? $_POST['username'] : "";
 
         $root = $_SERVER['DOCUMENT_ROOT'];
-        require_once $root . '/assignment/database/info_connect_db.php';
+        require_once $root . '/ShopShoe/database/info_connect_db.php';
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

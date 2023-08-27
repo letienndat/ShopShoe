@@ -1,6 +1,6 @@
 <?php
 session_start();
 if ($username_local !== null) {
-    header("Location: " . "/assignment/src/home.php");
+    header("Location: " . "/ShopShoe/src/home.php");
     exit;
 }

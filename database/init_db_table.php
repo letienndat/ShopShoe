@@ -1,6 +1,6 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
-require_once $root . '/assignment/database/info_connect_db.php';
+require_once $root . '/ShopShoe/database/info_connect_db.php';
 
 try {
     // Kết nối đến cơ sở dữ liệu MySQL
